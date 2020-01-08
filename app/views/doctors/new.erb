@@ -1,0 +1,18 @@
+<h1> Enter new Doctor information</h1>
+<form method="POST" action='/doctors'>
+<label for= "name"> Name</label>
+<input type= "text" id= "name" name= "name"/>
+<label for= "specialty"> Specialty</label>
+<input type= "text" id= "specialty" name= "specialty"/>
+<label for= "salary"> Expected Salary</label>
+<input type= "text" id= "salary" name= "salary"/>
+<label for= "hospital_id"> Hospital</label>
+<select name= "hospital_id">
+   <% Hospital.all.each do |hospital|%>
+     <option value=<%= hospital.id%>>
+       <%= hospital.name %>
+       </option>
+       <% end%>
+  
+<input type= "submit">
+</form>

@@ -10,4 +10,4 @@ gem 'rack'
 gem 'shotgun'
 gem 'sinatra'
 gem 'tux'
- 
+gem 'byebug'

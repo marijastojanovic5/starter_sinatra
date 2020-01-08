@@ -1,10 +1,20 @@
 <h1> <%=@doctor.name%> </h1>
 <div>
+
   <li> Speciality - <%=@doctor.specialty%> </li>
     <li> Salary  - <%=@doctor.salary%> </li>
   <li> Hospital -  <%=@doctor.hospital.name%> </li>
-
+<br>
   </div>
+  <%# <a href='/doctors/<%=@doctor.id'>Delete this Doctor</a> %> 
+     
+     <form action= '/doctors/<%=@doctor.id%>' method= "POST">
+       <input type="hidden" value= "DELETE" name="_method">
+       <input type="submit" value="Delete this Doctor">
+       </form>
+ <a href='/doctors/<%=@doctor.id%>/edit'> Edit this Doctor</a>
+<br>
+  <a href='/doctors'> Back to Doctors</a>
 
 
 

@@ -1,0 +1,28 @@
+<form method= "POST" action= "/doctors/<%=@doctor.id%>">
+<input type= "hidden" name = "_method" value = "patch">
+<ul>
+  <li>
+   <label for= "name"> Name </label>
+   <input id="name" type= "text" name = doctor[name] value= "<%= @doctor.name%> "/>
+   </li>
+   <li>
+   <label for= "specialty"> Specialty </label>
+   <input id="specialty" type= "text" name = doctor[specialty] value= "<%= @doctor.specialty%> "/>
+   </li>
+   <li>
+   <label for= "salary"> Salary </label>
+   <input id="salary" type= "text" name = doctor[salary] value= "<%= @doctor.salary%> "/>
+   </li>
+   <li>
+  <label for= "hospital_id"> Hospital</label>
+   <select name= "hospital_id">
+   <% Hospital.all.each do |hospital|%>
+     <option value=<%= hospital.id%>>
+       <%= hospital.name %>
+       </option>
+       <% end%>
+   </li>
+  
+</ul>
+ <input type ="submit"/>
+ </form>

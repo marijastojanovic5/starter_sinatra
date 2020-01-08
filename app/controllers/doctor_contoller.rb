@@ -5,6 +5,7 @@ class DoctorController < Sinatra::Base
  
     get '/doctors' do 
         @doctors = Doctor.all
+        byebug
         erb :index
     end
 

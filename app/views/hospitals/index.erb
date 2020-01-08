@@ -1,0 +1,7 @@
+<h1>Hospital list</h1>
+
+<ul>
+<% @hospitals.each do |hospital| %>
+    <li><a href="/doctors"><%= hospital.name%></a></li>
+    <% end %>
+</ul>
